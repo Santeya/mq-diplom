@@ -9,6 +9,57 @@
 </head>
 
 <body>
+  <div class="popup-wrapper">
+    <div class="popup">
+      <button class="popup-close" type="button">
+        <span class="popup-close-text">закрыть окно</span>
+      </button>
+      <header class="popup-title">
+        <h2>Ваш фидбек</h2>
+      </header>
+
+      <form class="form">
+        <div class="form-group">
+          <label class="select-group">
+            <span class="select-label question">Как часто вы заходите на сайт?</span>
+            <select class="select">
+              <option class="option" value="every-day" selected>Почти каждый день</option>
+              <option value="every-week" selected>Каждую неделю</option>
+              <option value="every-month" selected>Раз в месяц</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="form-group">
+          <div class="radio-form">
+            <span class="radio-label question">Вы подписаны на e-mail рассылку?</span>
+            <label class="radio-group">
+              <input type="radio" class="radio" name="radio-group">
+              <span class="radio-group-text">Да</span>
+            </label>
+            <label class="radio-group">
+              <input type="radio" class="radio" name="radio-group">
+              <span class="radio-group-text">Нет</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="textfield">
+            <span class="question">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+            <textarea class="field" placeholder="Может, больше рецептов?"></textarea>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="button feedback-button">Отправить</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+
   <header class="header">
     <div class="upper-header">
       <div class="logo">
@@ -48,52 +99,7 @@
   </header>
 
 
-  <div class="popup-wrapper">
-    <div class="popup">
-      <div class="popup-title">
-        <h2>Ваш фидбек</h2>
-      </div>
 
-      <form class="form">
-        <div class="form-group">
-          <label class="select-group">
-            <span class="select-label question">Как часто вы заходите на сайт?</span>
-            <select class="select">
-              <option value="every-day" selected>Почти каждый день</option>
-              <option value="every-week" selected>Каждую неделю</option>
-              <option value="every-month" selected>Раз в месяц</option>
-            </select>
-          </label>
-        </div>
-
-        <div class="form-group">
-          <div class="radio">
-            <span class="radio-label question">Вы подписаны на e-mail рассылку?</span>
-            <label class="radio-group">
-              <input type="radio" class="radio" name="radio-group">
-              <span class="radio-group-text">Да</span>
-            </label>
-            <label class="radio-group">
-              <input type="radio" class="radio" name="radio-group">
-              <span class="radio-group-text">Нет</span>
-            </label>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class="textfield">
-            <span class="question">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
-            <textarea class="field" placeholder="Может, больше рецептов?"></textarea>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <button type="submit" class="button feedback-button">Отправить</button>
-        </div>
-      </form>
-      <button class="popup-close" type="button"></button>
-    </div>
-  </div>
 
 
   <div class="trends">
@@ -459,9 +465,7 @@
           <img src="images/shop-item-desk1.jpg" alt="Подушка с принтом">
         </picture>
         <div class="shop-item-content">
-          <div class="shop-item-title">
-            <h2>Подушки на диван</h2>
-          </div>
+          <h2 class="shop-item-title">Подушки на диван</h2>
           <p class="shop-item-description">Набор из двух подушек с модными принтами. Видео о создании <a href="#0"
               class="shop-item-link">здесь</a>.
           </p>
@@ -470,7 +474,7 @@
               <span class="shop-item-price old-price">1000 ₽</span>
               <span class="shop-item-price new-price">800 ₽</span>
             </div>
-            <buttom class="shop-item-button" type="button">В магазин</buttom>
+            <button class="shop-item-button" type="button">В магазин</buttom>
           </div>
         </div>
       </div>
@@ -482,9 +486,7 @@
           <img src="images/shop-item-desk2.jpg" alt="Тряпичная кукла">
         </picture>
         <div class="shop-item-content">
-          <div class="shop-item-title">
-            <h2>Кукла "Зайчик"</h2>
-          </div>
+          <h2 class="shop-item-title">Кукла "Зайчик"</h2>
           <p class="shop-item-description">Интерьерная рукодельная кукла "Зайчик", созданию которой посвящена <a
               href="#0" class="shop-item-link">весенняя серия постов</a> в блоге и несколько подкастов.
           </p>
@@ -493,7 +495,7 @@
             <div class="shop-item-prices">
               <span class="shop-item-price new-price">3500 ₽</span>
             </div>
-            <buttom class="shop-item-button" type="button">В магазин</buttom>
+            <button class="shop-item-button" type="button">В магазин</buttom>
           </div>
         </div>
       </div>
@@ -504,9 +506,7 @@
           <img src="images/shop-item-desk3.jpg" alt="Подушка с принтом">
         </picture>
         <div class="shop-item-content">
-          <div class="shop-item-title">
-            <h2>Шестиугольная рамка</h2>
-          </div>
+          <h2 class="shop-item-title">Шестиугольная рамка</h2>
           <p class="shop-item-description">Необычная рамка для украшения дома из видео <a href="#0"
               class="shop-item-link">"Как сделать рамку из подручных средств за 30 минут"</a>.
           </p>
@@ -515,7 +515,7 @@
               <span class="shop-item-price old-price">500 ₽</span>
               <span class="shop-item-price new-price">400 ₽</span>
             </div>
-            <buttom class="shop-item-button" type="button">В магазин</buttom>
+            <button class="shop-item-button" type="button">В магазин</buttom>
           </div>
         </div>
       </div>

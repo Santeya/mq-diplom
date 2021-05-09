@@ -245,7 +245,6 @@ body {
 }
 
 
-
 /*HEADER*/
 
 .header {
@@ -265,7 +264,6 @@ body {
 }
 
 
-
 .header:after {
     content: "";
     top: 0;
@@ -279,7 +277,6 @@ body {
     z-index: -1;
 }
 
-
 .upper-header {     
     width: 100%;         
     max-width: 1200px; 
@@ -290,14 +287,11 @@ body {
     margin: 30px auto;
 }
 
-
-
 .logo {
     width: 179px;
     align-self: center;
     padding-right: 20px;
 }
-
 
 .menu {
     display: flex;
@@ -326,7 +320,7 @@ body {
 }
 
 .menu-link:hover {
-    text-decoration: underline;
+    text-decoration: underline;  
 }
 
 .menu-button {
@@ -440,7 +434,7 @@ body {
 
      .menu-list {
         display: none;   
-}
+    }
 
     .menu-button {
         visibility: visible; 
@@ -453,8 +447,6 @@ body {
         padding-top: 40px;
     }
 }
-
-
 
 
 /*TRENDS*/
@@ -546,7 +538,6 @@ body {
     margin: 20px;
 }
 
-
 .trend-link {
     text-decoration: none;
     color: #ffffff;
@@ -558,11 +549,10 @@ body {
 }
 
 
-
 @media (min-width: 1200px) {  
     .trend:nth-child(n+2) {
-    margin-left: 5px;
-} 
+    margin-left: 5px;   
+    } 
 }
 
 
@@ -646,6 +636,7 @@ body {
 .article:nth-child(n+2) {
     margin-top: 60px;
 }
+
 .picture {
     height: 294px;
     width: 380px;
@@ -715,6 +706,7 @@ body {
     margin-top: 30px;
 }
 
+
 @media (min-width: 641px) and (max-width: 1199px) {
     .page {
         display: flex;
@@ -730,7 +722,6 @@ body {
     flex-direction: column; 
     }
 }
-
 
 .aside {
     width: 287px;
@@ -1184,6 +1175,7 @@ text-decoration: none;
     text-decoration: none;
 }
 
+
 @media (min-width: 641px) and (max-width: 1199px) {
     .footer {
         width: 700px;
@@ -1191,6 +1183,7 @@ text-decoration: none;
         margin-right: auto;
     }
 }
+
 
 @media (max-width: 640px) {
     .footer {

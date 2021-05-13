@@ -44,11 +44,6 @@ body {
 
 /*popup*/
 
-/* //попап сделан, просто отключена видимость в .popup-wrapper.
-А почему z-index не работает? popup не остается поверх страницы при прокрутке
-Как вообще лучще реализовать всплывающее окно с фоном - 
-через дополнителньй контейнер wrapper или через псевдоэлемент? */
-
 
 .popup-wrapper {
     width: 100%;
@@ -57,23 +52,9 @@ body {
     position: fixed;
     right: 0px;
     top: 0px;
-    z-index: 0;
+    z-index: 1;
     visibility: hidden;
 }
-
-/*
-.popup::before {
-    content: "";
-    background-color: #000000;
-    opacity: 0.85;
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    
-}*/
 
 .popup {
     width: 390px;
@@ -84,7 +65,6 @@ body {
     margin:auto;
     
     position: relative;
-    z-index: 9999;
     background-color: #ffffff;
      
 }
@@ -281,7 +261,7 @@ body {
     width: 100%;         
     max-width: 1200px; 
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-between; 
     padding-left: 15px;
     padding-right: 15px;
     margin: 30px auto;
@@ -289,6 +269,7 @@ body {
 
 .logo {
     width: 179px;
+    height: 41px;
     align-self: center;
     padding-right: 20px;
 }
@@ -296,7 +277,6 @@ body {
 .menu {
     display: flex;
     flex-direction: row-reverse;
-    /*text-align: right;*/
     align-items: center;
 }
 
@@ -324,7 +304,7 @@ body {
 }
 
 .menu-button {
-  width: 1.4em;
+  width: 1.1em;
   height: 1em;  
   border: none;
   padding: 0;
@@ -340,9 +320,8 @@ body {
 .menu-button:before, .menu-button:after {
   content:"";
   width: 100%;
-  height: 20%;
+  height: 15%;
 
-  border-radius: 5px;
   background-color: #ffffff;  
 
   position: absolute;
@@ -359,10 +338,9 @@ body {
 
 .menu-button-label {
   width: 100%;
-  height: 20%;
+  height: 15%;
   margin-top: -0.1em;  
 
-  border-radius: 5px;
   background-color: #ffffff;  
 
   position: absolute;
@@ -379,25 +357,26 @@ body {
     line-height: 1.6;
     color: #ffffff;
     text-align: center;
-    padding-top: 194px;
+    padding-top: 1.55em;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 145px;
+    padding-bottom: 3.11em;
 }
-
 
 @media (min-width: 641px) and (max-width: 1199px) {
     .header {
         background-image: url(../images/banner-bg-tablet.jpg);
+        min-height: 390px;
     }
 
     .upper-header {
         width: 700px;
+        margin: 40px auto;
     }
 
     .logo {
         width: 158px;
-        height: 35px;
+        height: 36px;
     }
 
     .menu-list {
@@ -408,31 +387,35 @@ body {
         visibility: visible;
     }
 
-     .header-title {
+    .header-title {
+        max-width: 620px;
         font-size: 40px;
         line-height: 1.375;
+        padding-top: 1.5em;
+        padding-bottom: 2.5em;
     }
 }
-
 
 @media (max-width: 640px) {
     .header {
         background-image: url(../images/banner-mobile.jpg);
+        min-height: 640px;
+        justify-content: space-between;
     }
 
     .upper-header {
         display: flex;
         flex-direction: column-reverse;
+        min-height: 260px;  
     }
 
-     .logo {
-        width: 269px;
-        height: 45px;
-        padding-top: 150px;
-        padding-bottom: 10px;
+    .logo {
+       width: 269px; 
+        height: 61px;
+        
     }
 
-     .menu-list {
+    .menu-list {
         display: none;   
     }
 
@@ -444,7 +427,8 @@ body {
         font-size: 26px;
         line-height: 1.38;
         max-width: 330px;
-        padding-top: 40px;
+        padding-top: 0;
+        padding-bottom: 8.2em;
     }
 }
 
@@ -466,7 +450,6 @@ body {
     align-items: center;
 }
 
-
 .trends-title::after {
     content: "";
     width: 66px;
@@ -479,13 +462,12 @@ body {
 }
 
 .trends-bar {
-    width: 100%;
     display: flex;
-}
+   }
 
 .trend {
     width: 25%;
-    min-height: 320px;
+    height: 320px;
    
     background-repeat: no-repeat;
     background-position: center; 
@@ -497,8 +479,6 @@ body {
 
     display: flex;
 }
-
-
 
 .trend1 {
      background-image: url(../images/trend1.jpg);
@@ -531,9 +511,8 @@ body {
 
 .trend-content {
     width: 100%;
-    height: 50%;
     border: 3px solid #b59f5b;
-    padding: 0.75em;
+    padding: 1em;
     align-self: flex-end;
     margin: 20px;
 }
@@ -548,22 +527,22 @@ body {
     text-decoration: none;
 }
 
-
 @media (min-width: 1200px) {  
     .trend:nth-child(n+2) {
     margin-left: 5px;   
     } 
 }
 
-
 @media (min-width: 641px) and (max-width: 1199px) {
     .trends-bar {
+        width:100%;
         display: flex;
         flex-wrap: wrap;
     }
 
     .trend {
-        width: calc(50% - 5px); 
+        width: calc(50% - 2.5px);
+        height: 250px;
     }
 
     .trend:nth-child(even) {
@@ -574,7 +553,7 @@ body {
         margin-top: 5px;
     }
 
-    .trend-title {
+    .trend-link {
         font-size: 17px;
     }
 
@@ -590,22 +569,21 @@ body {
         flex-direction: column;
     }
 
+    
     .trend {
         width: 100%;
+        height: 230px;
     }
 
     .trend:nth-child(n+2) {
         margin-top: 5px;
     }
+
+    .trend-content {
+        margin: 15px;
+    }
 }
 
-/*
-@media (max-width: 640px) and (orientation: landscape) {
-    .trends-bar {
-        display: flex;
-        flex-wrap: wrap;
-    }
-}*/
 
 /*MAIN*/
 
@@ -617,11 +595,12 @@ body {
     margin-top: 64px;
     display: flex;
     justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .main {
     width: 795px;
-    padding-left: 15px;
 }
 
 .posts {
@@ -682,7 +661,7 @@ body {
 }
 
 .date-author {  
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .date {
@@ -707,25 +686,10 @@ body {
 }
 
 
-@media (min-width: 641px) and (max-width: 1199px) {
-    .page {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .main {
-        width: 390px;
-    }
-
-    .article {
-    display: flex;
-    flex-direction: column; 
-    }
-}
 
 .aside {
-    width: 287px;
-    padding-right: 15px;
+    width: 275px;
+    margin-left: 100px;
     display: flex;
     flex-direction: column;
 }
@@ -796,6 +760,7 @@ text-decoration: none;
 .search-group {
     display: flex;
     margin-bottom: 30px;
+    width: 100%;
 }
 
 .search-field {
@@ -809,7 +774,7 @@ text-decoration: none;
     line-height: 40px;
     color: #000000;
     padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 15px;  
 }
 
 .search-field:focus {
@@ -825,6 +790,7 @@ text-decoration: none;
     background-repeat: no-repeat;
     background-size: 18px 18px;
     background-position: center;
+    flex-shrink: 0;
 }
 
 .button:hover {
@@ -899,10 +865,12 @@ text-decoration: none;
 }
 
 .themes {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
 }
 
 .themes-item {
+    /*display: block;*/
     font-family: "OpenSans-Bold";
     font-size: 14px;
     line-height: 47px;
@@ -921,33 +889,125 @@ text-decoration: none;
     vertical-align: super;
 }
 
+
+@media (min-width: 641px) and (max-width: 1199px) {
+    .page {
+        display: flex;
+        width: 700px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .main {
+        width: 395px;
+    }
+
+    .aside {
+        width: 265px;
+        margin-left: 40px;
+    }
+    
+    .article {
+    display: flex;
+    flex-direction: column; 
+    }
+
+    .article:not(:last-child)::after {
+    content: "";
+    width: 380px;
+    height: 3px;
+    background-color: #eeeeee;  
+    opacity: 0.4;
+    margin-top: 20px;
+}
+
+    .article:nth-child(n+2) {
+        margin-top: 40px;
+    }
+
+    .article-content {
+        margin-left: 0;
+    }
+    .article-preview {
+        margin-top: 20px;
+    }
+}
+
 @media (max-width: 640px) {
     .page {
         display: block;
     }
 
+    .main {
+        width: 100%;    
+    }
     .article {
         display: flex;
         flex-direction: column;
+        width: 100%;
 }
-    .aside {
-        width: 100vw;
-        margin-left: 15px;
-        margin-right: 15px;
+
+    .picture {
+        max-width: 330px;
+        height: auto;
+    }
+
+    .article-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .article::after {
+        content: "";
+        width: 380px;
+        height: 3px;
+        background-color: #eeeeee;  
+        opacity: 0.4;
+        margin-top: 20px;
+    }    
+
+        .aside-title {
+        margin-top: 40px;
+        }
+
+        .aside {
+       margin-left: 0;
+       width: 100%; 
+    }
+
+    .search-group {
+        width: 100%;
     }
 
     .search-field {
-        width: calc(100% - 48px); /*формула рабочая, но ширина все равно остается 223рх, почему?*/
+        width: 100%;
     }
 
     .subscribe-field {
-        width: 100%; /*у aside заданы margin left/right, почему тут не применяется margin-right??*/
+        width: 100%; 
     }
 
     .subscribe-button {
         width: 100%;  
         }
    
+    .themes-item {
+        display: block;   
+    }    
+
+    .item-underline {
+        position: relative;
+
+    }
+
+    .item-underline::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: #b59f5b;  
+        opacity: 0.4;
+        position: absolute;
+    }
 }
 
 
@@ -958,7 +1018,6 @@ text-decoration: none;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .shop-title {
@@ -1000,8 +1059,6 @@ text-decoration: none;
     align-items: center;
     width: 33.33%;
     padding: 20px; 
-
-
 }
 
 .shop-item-content {
@@ -1010,7 +1067,6 @@ text-decoration: none;
     width: 300px;
     margin-top: -15px;
     padding-top: 20px;
-    flex-grow: 1;
 
 }
 
@@ -1026,7 +1082,7 @@ text-decoration: none;
    font-size: 15px;
    line-height: 22px;
    color: #0f0d0e;
-   
+   min-height: 100px;
 }
 
 .shop-item-link {
@@ -1034,13 +1090,11 @@ text-decoration: none;
   text-decoration: none;  
 }
 
-
 .shop-item-footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin-top: 20px;
- 
 }
 
 .shop-item-price {
@@ -1079,13 +1133,11 @@ text-decoration: none;
     .shop-bar {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        
+        justify-content: space-between;   
     }
 
     .shop-item {
         width: 50%;
-    
     }
 
     .shop-item:nth-child(n+3) {
@@ -1105,6 +1157,10 @@ text-decoration: none;
 
     .shop-item:nth-child(n+2) {
         margin-top: 20px;
+    }
+
+    .shop-item-content {
+        width: 285px;
     }
 }
 
@@ -1175,20 +1231,29 @@ text-decoration: none;
     text-decoration: none;
 }
 
-
 @media (min-width: 641px) and (max-width: 1199px) {
     .footer {
         width: 700px;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 50px;
+    }
+
+    .copyright {
+        margin-top: 50px;
+        margin-bottom: 35px;
     }
 }
-
 
 @media (max-width: 640px) {
     .footer {
         width: 330px;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 45px;
+    }
+
+    .copyright {
+        margin: 45px auto;
     }
 }

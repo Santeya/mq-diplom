@@ -82,7 +82,6 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-color: transparent;
-  
 }
 
 .popup-close-text {
@@ -281,7 +280,6 @@ body {
     width: 179px;
     height: 41px;
     align-self: center;
-    padding-right: 20px;
 }
 
 .menu {
@@ -375,13 +373,15 @@ body {
 
 @media (min-width: 641px) and (max-width: 1199px) {
     .header {
+        width: 100%;
         background-image: url(../images/banner-bg-tablet.jpg);
         min-height: 390px;
     }
 
     .upper-header {
-        width: 700px;
-        margin: 40px auto;
+        width: calc(100% - 70px);
+        margin: 40px 35px;
+        padding: 0;
     }
 
     .logo {
@@ -421,8 +421,7 @@ body {
 
     .logo {
        width: 269px; 
-        height: 61px;
-        
+        height: 61px;  
     }
 
     .menu-list {
@@ -571,7 +570,6 @@ body {
         font-size: 14px;
     }
 }
-
 
 @media (max-width: 640px) {
     .trends-bar {
@@ -751,17 +749,18 @@ body {
 }
 
 .latest-post-title-link {
-font-family: "OpenSans-Bold";
-font-size: 14px;
-line-height: 18px;
-text-transform: uppercase;
-color: #000000;
-text-decoration: none;
+    font-family: "OpenSans-Bold";
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
 }
 
 .search {
     margin-top: 60px;
     display: flex;
+    width: calc (100% - 48px);
 }
 
 .search-group {
@@ -771,7 +770,7 @@ text-decoration: none;
 }
 
 .search-field {
-    min-width: 223px;
+    width: 100%;
     height: 48px;
     background-color: #f4f7f6;
     border: none;
@@ -816,7 +815,7 @@ text-decoration: none;
 }
 
 .subscribe-field {
-    min-width: 271px;
+    width: 100%;
     height: 48px;
     background-color: #f4f7f6;
     border: none;
@@ -830,7 +829,7 @@ text-decoration: none;
 }
 
 .subscribe-button {
-    min-width: 271px;
+    width: 100%;
     height: 48px;
     border: none;
     margin-top: 15px;
@@ -899,23 +898,26 @@ text-decoration: none;
 @media (min-width: 641px) and (max-width: 1199px) {
     .page {
         display: flex;
-        width: 700px;
-        padding-right: 0;
+        width: calc(100% - 70px);
         padding-left: 0;
+        padding-right: 0;
+        margin-left: 35px;
+        margin-right: 35px;
     }
 
     .main {
-        width: 395px;
+        width: 55%;
     }
 
     .aside {
-        width: 265px;
-        margin-left: 40px;
+        width: calc(45% - 35px);
+        margin-left: 35px;
     }
     
     .article {
     display: flex;
     flex-direction: column; 
+    width: 100%;
     }
 
     .article:not(:last-child)::after {
@@ -933,9 +935,20 @@ text-decoration: none;
 
     .article-content {
         margin-left: 0;
+        width: 100%;
     }
+
     .article-preview {
         margin-top: 20px;
+    }
+
+    .picture {
+        width: 100%;
+        height: auto;
+    }
+
+    .picture-size {
+        width: 100%;
     }
 }
 
@@ -947,6 +960,7 @@ text-decoration: none;
     .main {
         width: 100%;    
     }
+
     .article {
         display: flex;
         flex-direction: column;
@@ -969,7 +983,7 @@ text-decoration: none;
 
     .article::after {
         content: "";
-        width: 380px;
+        width: 100%;
         height: 3px;
         background-color: #eeeeee;  
         opacity: 0.4;
@@ -1141,15 +1155,21 @@ text-decoration: none;
     .shop-bar {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;   
+        justify-content: space-between;
+        width: calc(100% - 40px);
     }
 
     .shop-item {
-        width: 50%;
+        width: calc(50% - 5px);
+        max-width: 520px;
     }
 
     .shop-item:nth-child(n+3) {
         margin-top: 20px;
+    }
+
+    .shop-item-content {
+        width: 100%;
     }
 }
 
@@ -1242,13 +1262,17 @@ text-decoration: none;
 
 @media (min-width: 641px) and (max-width: 1199px) {
     .footer {
-        width: 700px;
-        margin-left: auto;
-        margin-right: auto;
+        width: calc(100% - 70px);
+        margin-left: 35px;
+        margin-right: 35px;
         margin-top: 50px;
+        align-items: center;
     }
 
-    .copyright {
+    .articles-socials {
+        width: 100%;
+    }
+    .copyright {        
         margin-top: 50px;
         margin-bottom: 35px;
     }
